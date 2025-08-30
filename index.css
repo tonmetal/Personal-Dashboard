@@ -21,6 +21,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 div.top {
@@ -96,6 +97,8 @@ p.weather-humidity{
     flex-direction: column;
     margin: 0 2.5em 5em;
     width: fit-content;
+    position: absolute;
+    bottom: 4.5em;
 }
 
 #favorites a{
