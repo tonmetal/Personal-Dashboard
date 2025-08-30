@@ -31,7 +31,7 @@ h1.time {
     text-align: end;
     font-size: 5rem;
     font-weight: 500;
-    margin: 0.4em 0.9em ;
+    margin: 0.3em 0.9em ;
 }
 
 div#crypto {
@@ -82,6 +82,12 @@ p.weather-temp {
     margin: 0;
     font-size: 1.7rem;
     margin-left: -10px;
+}
+
+p.weather-humidity{
+    font-weight: bold;
+    color: rgb(154, 210, 243);
+    margin: 0;
 }
 
 #favorites{
