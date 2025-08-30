@@ -1,20 +1,22 @@
 import { favorites } from "./favorites.js"
+import { motivationalQuotes } from "./frases.js"
 
-const topic = ["hacker", "food", "architecture", "weightlifting", "sunset", "gotic", "code", "monuments", "landscapes"]
+const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery","darkness","neon","architecture","monuments"]
+let favorito = ""
 
 
-fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${topic[Math.floor(Math.random()*9 )]}`)
+fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${topic[Math.floor(Math.random()*topic.length )]}`)
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `linear-gradient(to top, rgba(0,0,0,0.6)0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0)20%),
-    linear-gradient(to bottom, rgba(0,0,0,0.8)0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0)50%), url(${data.urls.regular})`
-		document.getElementById("author").innerHTML =  data.location.name
+    linear-gradient(to bottom, rgba(0,0,0,0.8)0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0)50%), url(${data.urls.full})`
+		document.getElementById("location").innerHTML =  data.location.name
+        console.log(data.location)
     })
     .catch(err => {
-        // Use a default background image/author
+        // Use a default background image
         document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
 )`
-		document.getElementById("author").textContent = `By: Dodi Achmad`
     })
 
 fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
@@ -59,6 +61,7 @@ navigator.geolocation.getCurrentPosition(position => {
             return res.json()
         })
         .then(data => {
+            console.log(data)
             const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
             document.getElementById("weather").innerHTML = `
                 <img src=${iconUrl} />
@@ -69,10 +72,12 @@ navigator.geolocation.getCurrentPosition(position => {
         .catch(err => console.error(err))
 });
 
-let favorito = ""
+
 for( let favorite of favorites){ 
     favorito += `
     <a href="${favorite.url}"><img class="fav" src="${favorite.fav}">${favorite.name}</a>`  
 }
 document.getElementById("favorites").innerHTML = favorito
+
+document.getElementById("quote").textContent = `"${motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]}"`
 

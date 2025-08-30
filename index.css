@@ -28,10 +28,10 @@ div.top {
 }
 
 h1.time {
-    text-align: center;
+    text-align: end;
     font-size: 5rem;
     font-weight: 500;
-    margin: 0.4em  ;
+    margin: 0.4em 0.9em ;
 }
 
 div#crypto {
@@ -84,16 +84,6 @@ p.weather-temp {
     margin-left: -10px;
 }
 
-p#author {
-    font-size: 0.9rem;
-    margin: 1em 2em;
-}
-
-#favorites{
-    display: flex;
-    flex-direction: column;
-}
-
 #favorites{
     display: flex;
     flex-direction: column;
@@ -116,7 +106,6 @@ p#author {
 }
 
 #favorites a:hover{
-    color: rgb(206, 161, 94);
     background:rgba(243, 241, 241, 0.3);
 }
 
@@ -124,6 +113,28 @@ p#author {
     width: 2em;
     margin-right: 0.5em;
 }
+
 #red{
     color: rgb(236, 6, 6);
+}
+
+footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+#location{
+    position: absolute;
+    left: 10;
+    bottom: 0;
+    margin-left: 2.5em;
+    font-size: 0.92em;
+    color:rgba(255, 255, 255, 0.66);
+}
+
+#quote{
+    font-size: 1.3em;
 }
