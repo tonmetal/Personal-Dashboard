@@ -5,19 +5,45 @@ const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery
 let favorito = ""
 
 
-fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${topic[Math.floor(Math.random()*topic.length )]}`)
-    .then(res => res.json())
-    .then(data => {
-        document.body.style.backgroundImage = `linear-gradient(to top, rgba(0,0,0,0.6)0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0)20%),
-    linear-gradient(to bottom, rgba(0,0,0,0.8)0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0)50%), url(${data.urls.full})`
-		document.getElementById("location").innerHTML =  `${data.location.city? data.location.city + ", " : ""} ${data.location.country || ""}`
-        console.log(data.location)
-    })
-    .catch(err => {
-        // Use a default background image
-        document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
-)`
-    })
+// Función DRY para aplicar el fondo con gradientes
+const setBackground = (url) => {
+  document.body.style.backgroundImage = `
+    linear-gradient(to top, rgba(0,0,0,0.6)0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0)20%),
+    linear-gradient(to bottom, rgba(0,0,0,0.8)0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0)50%),
+    url(${url})
+  `;
+};
+
+// Función para precargar imagen y ejecutar callback cuando esté lista
+const preloadImage = (url, callback) => {
+  const img = new Image();
+  img.src = url;
+  img.onload = callback;
+};
+
+// Fetch de Unsplash
+fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${topic[Math.floor(Math.random() * topic.length)]}`)
+  .then(res => res.json())
+  .then(data => {
+    // Primero precargamos regular
+    preloadImage(data.urls.regular, () => {
+      setBackground(data.urls.regular);
+
+      // Luego precargamos full y reemplazamos
+      preloadImage(data.urls.full, () => setBackground(data.urls.full));
+    });
+
+    // Mostrar ubicación si existe
+    document.getElementById("location").innerHTML =
+      `${data.location.city ? data.location.city + ", " : ""}${data.location.country || ""}`;
+
+    console.log(data.location);
+  })
+  .catch(err => {
+    // Fallback si hay error
+    setBackground("https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080");
+  });
+
 
 fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
     .then(res => {

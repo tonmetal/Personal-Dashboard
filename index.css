@@ -12,6 +12,7 @@ body {
     color: white;
     font-family: Montserrat, sans-serif;
     text-shadow: 0px 0px 6px #070707;
+    transition: background-image 0.8s ease-in-out; /* transición suave entre regular → full */
 }
 
 main {
