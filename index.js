@@ -10,7 +10,7 @@ fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(data => {
         document.body.style.backgroundImage = `linear-gradient(to top, rgba(0,0,0,0.6)0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0)20%),
     linear-gradient(to bottom, rgba(0,0,0,0.8)0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0)50%), url(${data.urls.full})`
-		document.getElementById("location").innerHTML =  data.location.name
+		document.getElementById("location").innerHTML =  `${data.location.city? data.location.city + ", " : ""} ${data.location.country || ""}`
         console.log(data.location)
     })
     .catch(err => {
