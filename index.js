@@ -1,7 +1,7 @@
 import { favorites } from "./favorites.js"
 import { motivationalQuotes } from "./frases.js"
 
-const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery","darkness","neon","architecture","monuments"]
+const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery","darkness","neon","architecture", "spain architecture"]
 let favorito = ""
 
 
@@ -75,6 +75,8 @@ function getCurrentTime() {
     const date = new Date()
     document.getElementById("time").textContent = date.toLocaleTimeString("es", {timeStyle: "short"})
 }
+
+getCurrentTime()
 
 setInterval(getCurrentTime, 1000)
 
