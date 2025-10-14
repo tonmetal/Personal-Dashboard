@@ -1,6 +1,7 @@
 import { favorites } from "./favorites.js"
 import { motivationalQuotes } from "./frases.js"
 
+
 const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery","darkness","neon","architecture", "spain architecture"]
 let favorito = ""
 

@@ -30,7 +30,7 @@ h1.time {
     text-align: end;
     font-size: 5rem;
     font-weight: 500;
-    margin: 0.3em 0.9em ;
+    margin: 0.3em 0.5em ;
 }
 
 div#crypto {
@@ -62,7 +62,7 @@ div#weather {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-self: flex-start;
-    margin:  0 5em;
+    margin:  0 3em;
 }
 
 div#weather > img {
@@ -92,7 +92,7 @@ p.weather-humidity{
 #favorites{
     display: flex;
     flex-direction: column;
-    margin: 0 2.5em 5em;
+    margin: 0 2.5em 3.5em;
     width: fit-content;
     position: absolute;
     bottom: 4.5em;
