@@ -12,5 +12,5 @@ export const favorites =[
     {url:"https://rutracker.org/forum/index.php", name: "Rutracker",fav:"https://rutracker.org/favicon.ico"},
     {url: "https://www.filmaffinity.com/es/main.html", name: "Filmaffinity",fav:"https://www.filmaffinity.com/favicon.png"},
     {url: "https://www.hsnstore.com/", name: "Hsn",fav:"https://www.hsnstore.com/media/favicon/default/android-icon-48x48_2.png"},
-    {url: "https://zoom.earth/maps/temperature/", name: "Zoom EARTH",fav:"https://zoom.earth/assets/images/icon-48.1.png"} 
+    {url: "https://zoom.earth/maps/temperature/", name: "Zoom",fav:"https://zoom.earth/assets/images/icon-48.1.png"} 
     ]

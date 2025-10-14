@@ -95,7 +95,7 @@ p.weather-humidity{
     margin: 0 2.5em 3.5em;
     width: fit-content;
     position: absolute;
-    bottom: 4.5em;
+    bottom: 7em;
 }
 
 #favorites a{
@@ -118,7 +118,7 @@ p.weather-humidity{
 }
 
 .fav{
-    width: 2em;
+    width: 1.8em;
     margin-right: 0.5em;
 }
 
