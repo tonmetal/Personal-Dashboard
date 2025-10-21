@@ -2,7 +2,7 @@ import { favorites } from "./favorites.js"
 import { motivationalQuotes } from "./frases.js"
 
 
-const topic = ["weight workout","cyberpunk","landscape","code","hacker","mistery","darkness","neon","architecture", "spain architecture"]
+const topic = ["weight workout","cyberpunk","landscape","code","neon","architecture", "spain architecture", "autumn"]
 let favorito = ""
 
 
@@ -96,11 +96,13 @@ navigator.geolocation.getCurrentPosition(position => {
                 <img src=${iconUrl} />
                 <p class="weather-temp">${Math.round(data.main.temp)}º</p>
                 <p class="weather-city">${data.name} </p>
-                <p class="weather-humidity">${data.main.humidity}%<p>
+                <p class="weather-humidity"> ${data.main.humidity}%<p>
             `
         })
         .catch(err => console.error(err))
 });
+
+
 
 
 for( let favorite of favorites){ 
