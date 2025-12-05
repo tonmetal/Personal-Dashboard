@@ -8,7 +8,7 @@ export const favorites =[
     {url:"https://drive.google.com/drive/my-drive", name: "Drive",fav:"//ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png"},
     {url:"https://chatgpt.com/?model=auto", name: "GPT",fav:"https://cdn.oaistatic.com/assets/favicon-180x180-od45eci6.webp"},
     {url:"https://github.com/tonmetal?tab=repositories", name: "Github",fav:"https://github.githubassets.com/favicons/favicon-dark.png"},
-    {url:"https://yts.mx/", name: "Yify", fav:"https://yts.mx/assets/images/website/apple-touch-icon-152x152.png"},
+    {url:"https://www.yts-official.to/", name: "Yify", fav:"https://cdn.aptoide.com/imgs/e/1/3/e13dda81482cca6dfb948c157bdd6f61_icon.png?w=128"},
     {url:"https://rutracker.org/forum/index.php", name: "Rutracker",fav:"https://rutracker.org/favicon.ico"},
     {url: "https://www.filmaffinity.com/es/main.html", name: "Filmaffinity",fav:"https://www.filmaffinity.com/favicon.png"},
     {url: "https://www.hsnstore.com/", name: "Hsn",fav:"https://www.hsnstore.com/media/favicon/default/android-icon-48x48_2.png"},

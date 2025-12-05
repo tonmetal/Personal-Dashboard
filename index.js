@@ -2,7 +2,7 @@ import { favorites } from "./favorites.js"
 import { motivationalQuotes } from "./frases.js"
 
 
-const topic = ["weight workout","cyberpunk","landscape","code","neon","architecture", "spain architecture", "autumn"]
+const topic = ["cyberpunk","neon","architecture", "spain architecture", "italy architecture", "portugal architecture","winter"]
 let favorito = ""
 
 
