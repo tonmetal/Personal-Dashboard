@@ -21,6 +21,7 @@ main {
     position: relative;
 }
 
+
 div.top {
     display: flex;
     justify-content: space-between;
@@ -89,6 +90,11 @@ p.weather-humidity{
     margin: 0;
 }
 
+.time-weather{
+    display: flex;
+    flex-direction: column;
+}
+
 #favorites{
     display: flex;
     flex-direction: column;
@@ -145,4 +151,17 @@ footer{
 
 #quote{
     font-size: 1.3em;
+}
+
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 85%;
+    scale: 1.05;
+    transition: 0.1s;
 }
