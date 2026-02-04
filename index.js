@@ -2,7 +2,7 @@ import { favorites } from "./favorites.js"
 import { motivationalQuotes } from "./frases.js"
 
 
-const topic = ["milan","venice","florence","prague","budapest","krakow","vienna"]
+const topic = ["milan","venice","florence","prague","budapest","krakow","vienna","rome","lisbon","porto","seville","cordoba","cadiz","alhambra","toledo","madrid","valencia","segovia","avila","lugo","coruña","compostela","burgos","bilbao","santander","san sebastian","vitoria-gasteiz","zaragoza","london","paris","ireland","edinburgh","stockholm","istambul","moscow","petersburg","agra","michelangelo","bernini"]
 let favorito = ""
 
 
